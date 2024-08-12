@@ -17,9 +17,9 @@ public class AssetSmesController(AdminDbContext dbContext) : ODataController
 
     [EnableQuery]
     [HttpGet]
-    [ProducesResponseType(typeof(User), 200)]
+    [ProducesResponseType(typeof(AssetSme), 200)]
     [ProducesResponseType(404)]
-    public async Task<ActionResult<User>> Get([FromODataUri] int keyAssetId, [FromODataUri] string keyUserId)
+    public async Task<ActionResult<AssetSme>> Get([FromODataUri] int keyAssetId, [FromODataUri] string keyUserId)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
